@@ -1,0 +1,55 @@
+<div class="row" id="divContato">
+  <div class="grid_12">
+    <h3>Contato</h3>
+    <div class="map">
+      <figure class="">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d24214.807650104907!2d-73.94846048422478!3d40.65521573400813!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sus!4v1395650655094" style="border:0"></iframe>
+      </figure>
+    </div>
+  </div>
+  <div class="grid_12">
+
+    <form #f="ngForm" id="contact-form" *ngIf="contato" (ngSubmit)="onSubmit(f)">
+      <div id="divLoader" class="contact-form-loader"></div>
+      <fieldset>
+        <label class="name">Nome
+          <input type="text" maxlength="50" name="Nome" #Nome="ngModel" [(ngModel)]="contato.Nome" placeholder="" value="" data-constraints="@Required @JustLetters"  />
+          <span class="empty-message">*Nome é obrigatório.</span>
+        </label>
+       
+        <label class="email">Email
+          <input type="text" maxlength="50" name="Email" #Email="ngModel" [(ngModel)]="contato.Email" placeholder="" value="" data-constraints="@Required @Email" />
+          <span class="empty-message">*Email é obrigatório.</span>
+          <span class="error-message">*Email não é válido.</span>
+        </label>
+        <label class="phone">Telefone
+          <input type="text" maxlength="11" name="Telefone" #Telefone="ngModel" [(ngModel)]="contato.Telefone" placeholder="" value="" data-constraints="@Required @JustNumbers" />
+          <span class="empty-message">*Telefone é obrigatório.</span>
+        </label>
+       
+        <label class="message">Descrição
+          <textarea name="Descricao" maxlength="1000" #Descricao="ngModel" [(ngModel)]="contato.Descricao" placeholder="" data-constraints='@Required @Length(min=10,max=1000)'></textarea>
+          <span class="empty-message">*Digite uma descrição.</span>
+        </label>
+        <div class="clear"></div>
+        <div>
+          <button type="submit" class="btn">Enviar</button>
+        </div>
+      </fieldset> 
+      <div class="modal fade response-message">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+              <h4 class="modal-title">Modal title</h4>
+            </div>
+            <div class="modal-body">
+              You message has been sent! We will be in touch soon.
+            </div>      
+          </div>
+        </div>
+      </div>
+    </form>  
+
+  </div>
+</div>
