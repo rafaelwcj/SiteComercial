@@ -5,10 +5,10 @@ const path = require('path');
 const app = express();
 
 app.use(express.static(path.join(__dirname, 'dist')));
-app.use(express.static(path.join(__dirname, 'dist/Site')));
+app.use(express.static(path.join(__dirname, 'dist/mega-front')));
 
 app.get('*', (req, res) => {
-    res.sendFile(path.join(__dirname, 'dist/Site/index.html'));
+    res.sendFile(path.join(__dirname, 'dist/mega-front/index.html'));
 });
 
 const port = process.env.PORT || 3000;
