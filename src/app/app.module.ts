@@ -12,10 +12,10 @@ import { SobreComponent } from './sobre/sobre.component';
 import { ServicosComponent } from './servicos/servicos.component';
 import { HomeComponent } from './home/home.component';
 import { SiteinstitucionaisComponent } from './servicos/siteinstitucionais/siteinstitucionais.component';
-import { ServicosModule } from './servicos/servicos.module';
 import { LojavirtuaisComponent } from './servicos/lojavirtuais/lojavirtuais.component';
 import { MktgoogleComponent } from './servicos/mktgoogle/mktgoogle.component';
 import { MktredesociaisComponent } from './servicos/mktredesociais/mktredesociais.component';
+
 
 @NgModule({
   declarations: [

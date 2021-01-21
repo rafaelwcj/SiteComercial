@@ -47,6 +47,7 @@ export class ContatoComponent implements OnInit {
 
   validateForm() {
     this.isValid = true;
+    console.log(this.contato)
     if (this.contato.Nome == null) this.isValid = false;
     else if (this.contato.Email == null) this.isValid = false;
     else if (this.contato.Telefone == null) this.isValid = false;
@@ -55,15 +56,16 @@ export class ContatoComponent implements OnInit {
   }
 
   onSubmit() {
-
     if (this.validateForm()) {
       this._contatoService.salvarContato(this.contato).subscribe(r => {
         this.resetForm();
-        window.alert("Contato cadastrado com sucesso.");
         document.getElementById('divLoader').hidden = true;
+        document.getElementById("modalContato").style.display = "block";
       })
-    } else {
-      window.alert("Por favor preencha o formulário.");
     }
+  }
+
+  hideModal(){
+    document.getElementById("modalContato").style.display = "none";
   }
 }

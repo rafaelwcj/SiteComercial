@@ -3,7 +3,7 @@
     <h3>Contato</h3>
     <div class="map">
       <figure class="">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d24214.807650104907!2d-73.94846048422478!3d40.65521573400813!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sus!4v1395650655094" style="border:0"></iframe>
+         <iframe src="https://maps.google.com/maps?q=S%C3%A3o%20Miguel%20Paulista&t=&z=11&ie=UTF8&iwloc=&output=embed" style="border:0"></iframe>
       </figure>
     </div>
   </div>
@@ -36,15 +36,15 @@
           <button type="submit" class="btn">Enviar</button>
         </div>
       </fieldset> 
-      <div class="modal fade response-message">
+      <div class="modal fade response-message" id="modalContato" style="margin-top: 200px; padding-top: 50px;">
         <div class="modal-dialog">
           <div class="modal-content">
             <div class="modal-header">
-              <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-              <h4 class="modal-title">Modal title</h4>
+              <button type="button" class="close" data-dismiss="modal" (click)="hideModal()" aria-hidden="true">&times;</button>
+              <h4 class="modal-title">Contato</h4>
             </div>
             <div class="modal-body">
-              You message has been sent! We will be in touch soon.
+              Sua mensagem foi enviada! Em breve entraremos em contato.
             </div>      
           </div>
         </div>
