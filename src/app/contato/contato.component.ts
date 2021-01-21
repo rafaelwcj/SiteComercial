@@ -62,6 +62,8 @@ export class ContatoComponent implements OnInit {
         document.getElementById('divLoader').hidden = true;
         document.getElementById("modalContato").style.display = "block";
       })
+    } else {
+      window.alert('Preencha os campos para enviar o contato.');
     }
   }
 
