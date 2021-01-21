@@ -9,7 +9,7 @@
   </div>
   <div class="grid_12">
 
-    <form #f="ngForm" id="contact-form" *ngIf="contato" (ngSubmit)="onSubmit(f)">
+    <form #f="ngForm" id="contact-form" *ngIf="contato" (ngSubmit)="onSubmit()">
       <div id="divLoader" class="contact-form-loader"></div>
       <fieldset>
         <label class="name">Nome
